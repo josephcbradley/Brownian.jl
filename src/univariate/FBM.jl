@@ -142,7 +142,7 @@ function rand_fft(p::FBM, fbm::Bool = true)
     n = 1 << Int(ceil(log2(pnmone)))
 
     # Compute autocovariance sequence of underlying FGN
-    c = Vector{Float64}(undef, n + 1) # old was Array{Float64}(undef, n+1)
+    c = Vector{Float64}(undef, n + 1)
     autocov!(c, FGN((1 / n)^p.h, p.h), 0:n)
 
     # Compute square root of eigenvalues of circular autocovariance sequence
