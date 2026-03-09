@@ -20,3 +20,8 @@ rand([p, p], method = :rl, wtype = :improved)
 rand(p, method = :chol)
 rand(p, fbm = false, method = :chol)
 rand([p, p], method = :chol)
+
+# fBm using invalid method
+
+@test_throws ErrorException rand(p, method = :invalid_method)
+
