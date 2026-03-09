@@ -35,7 +35,6 @@ export StochasticProcess,
     convert,
     autocov!,
     autocov,
-    chol_update,
     rand!,
     rand
 
