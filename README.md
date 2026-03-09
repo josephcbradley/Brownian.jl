@@ -1,6 +1,7 @@
 ## Brownian
 
 [![CI](https://github.com/josephcbradley/Brownian.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/josephcbradley/Brownian.jl/actions/workflows/CI.yml)
+[![codecov](https://codecov.io/gh/josephcbradley/Brownian.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/josephcbradley/Brownian.jl)
 
 The Julia `Brownian` package is aimed at providing a centralized repository of algorithms for simulating Brownian-based
 stochastic processes. More precisely, the package currently provides routines for random sampling from
