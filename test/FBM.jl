@@ -21,6 +21,10 @@ rand(p, method = :chol)
 rand(p, fbm = false, method = :chol)
 rand([p, p], method = :chol)
 
+# fBm using invalid method
+
+@test_throws ErrorException rand(p, method = :invalid_method)
+
 # Checking function for efficient Cholesky update
 
 p = FBM(0:0.1:0.1*100, 0.4)
