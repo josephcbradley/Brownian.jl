@@ -28,7 +28,7 @@ BrownianMotion(t::Float64, n::Int64, np::Int) =
 function rand!(p::BrownianMotion, x::Vector{Float64})
     x[1] = 0.0
     for i = 2:p.n
-        x[i] = rand(Normal(0.0, sqrt(p.t[i] - p.t[i-1]))) + x[i-1]
+        x[i] = randn() * sqrt(p.t[i] - p.t[i-1]) + x[i-1]
     end
     x
 end
@@ -37,7 +37,7 @@ function rand!(p::Vector{BrownianMotion}, x::Matrix{Float64})
     for j = 1:length(p)
         x[1, j] = 0.0
         for i = 2:p[j].n
-            x[i, j] = rand(Normal(0.0, sqrt(p[j].t[i] - p[j].t[i-1]))) + x[i-1, j]
+            x[i, j] = randn() * sqrt(p[j].t[i] - p[j].t[i-1]) + x[i-1, j]
         end
     end
     x
