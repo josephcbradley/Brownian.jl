@@ -29,7 +29,7 @@ export StochasticProcess,
     #DiscreteMultivariateStochasticProcess,
     ContinuousMultivariateStochasticProcess,
     BrownianMotion,
-    #MvBrownianMotion,
+    MvBrownianMotion,
     FBM,
     FGN,
     convert,
@@ -41,6 +41,6 @@ export StochasticProcess,
 include("StochasticProcess.jl")
 include(joinpath("univariate", "BrownianMotion.jl"))
 include(joinpath("univariate", "FBM.jl"))
-#include(joinpath("multivariate", "MvBrownianMotion.jl"))
+include(joinpath("multivariate", "MvBrownianMotion.jl"))
 
 end # module
